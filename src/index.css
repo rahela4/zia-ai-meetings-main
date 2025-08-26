@@ -131,3 +131,7 @@
     transition: var(--transition-bounce);
   }
 }
+/* This hides the Lovable watermark */
+a[href*="lovable.dev"] {
+    display: none !important;
+}
