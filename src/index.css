@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional B2B SaaS Design System for Solutions by Zia */
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Professional Tech Palette */
+    --background: 0 0% 100%;
+    --foreground: 222 25% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 25% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 25% 11%;
+
+    /* Primary: Deep Blue */
+    --primary: 213 94% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 213 94% 48%;
+
+    /* Secondary: Light Blue */
+    --secondary: 213 94% 95%;
+    --secondary-foreground: 213 94% 20%;
+
+    /* Muted: Very Light Blue */
+    --muted: 213 94% 97%;
+    --muted-foreground: 213 30% 50%;
+
+    /* Accent: Darker Blue */
+    --accent: 213 94% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 94% 90%;
+    --input: 213 94% 90%;
+    --ring: 213 94% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(213 94% 55%), hsl(213 94% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(213 94% 97%));
+    --gradient-feature: linear-gradient(135deg, hsl(213 94% 55% / 0.1), hsl(213 94% 45% / 0.1));
+    
+    --shadow-soft: 0 4px 6px -1px hsl(213 94% 55% / 0.1), 0 2px 4px -1px hsl(213 94% 55% / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(213 94% 55% / 0.1), 0 4px 6px -2px hsl(213 94% 55% / 0.05);
+    --shadow-strong: 0 25px 50px -12px hsl(213 94% 55% / 0.25);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --spacing-section: 6rem;
+    --spacing-content: 4rem;
+  }
+
+  .dark {
+    --background: 222 25% 11%;
+    --foreground: 0 0% 100%;
+
+    --card: 222 25% 11%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 222 25% 11%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 213 94% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 50% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 213 50% 25%;
+    --muted-foreground: 213 30% 70%;
+
+    --accent: 213 94% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 50% 25%;
+    --input: 213 50% 25%;
+    --ring: 213 94% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Custom utility classes */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-feature {
+    background: var(--gradient-feature);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
