@@ -20,5 +20,23 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+     <script>
+        // Function to remove the Lovable logo
+        function removeLovableLogo() {
+            // Try to find the logo by its link
+            const lovableLogo = document.querySelector('a[href*="lovable.dev"]');
+            if (lovableLogo) {
+                lovableLogo.remove();
+                console.log("Lovable logo removed!");
+            }
+        }
+
+        // Run the function when the page loads
+        window.addEventListener('load', removeLovableLogo);
+
+        // Also run it every second for 5 seconds to catch it if it loads late
+        const interval = setInterval(removeLovableLogo, 1000);
+        setTimeout(() => clearInterval(interval), 5000);
+    </script>
   </body>
 </html>
